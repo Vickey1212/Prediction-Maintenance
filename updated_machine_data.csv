@@ -999,4 +999,4 @@ UDI,Product ID,Type,Air temperature [K],Process temperature [K],Rotational speed
 498.0,P00498,H,295.2,305.0,1422.0,30.5,110.0,0.0,No Failure,
 885.0,P00885,M,303.7,308.3,1583.0,48.4,234.0,1.0,Heat Failure,
 805.0,P00805,M,304.4,309.6,1579.0,46.6,232.0,1.0,Heat Failure,
-871.0,870,0,343.24,350.0,265.0,245.0,200.0,265.0,Heat Failure,Heat Failure
+303.7,884,2,309.0,1583.0,48.0,235.0,1.0,1.0,No Failure,No Failure

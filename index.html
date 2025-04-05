@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Failure Prediction</title>
+</head>
+<body>
+    <h2>Enter Machine Parameters</h2>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        label{
+            justify-content: center;
+            text-align: center;
+            padding: 100px;
+        }
+        h2{
+            text-align: center;
+            color:blue;
+        }
+        button{
+            text-align: center;
+            justify-content: right;
+            
+        }
+    </style>
+    <form action="/predict" method="POST">
+        <label for="Air temperature [K]">Air temperature [K]:</label>
+        <input type="text" name="Air temperature [K]" required><br><br>
+
+        <label for="Process temperature [K]">Process temperature [K]:</label>
+        <input type="text" name="Process temperature [K]" required><br><br>
+
+        <label for="Rotational speed [rpm]">Rotational speed [rpm]:</label>
+        <input type="text" name="Rotational speed [rpm]" required><br><br>
+
+        <label for="Tool wear [min]">Tool wear [min]:</label>
+        <input type="text" name="Tool wear [min]" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <h3>Prediction: {{ prediction }}</h3>
+    {% endif %}
+
+    {% if error %}
+        <h3 style="color:red;">Error: {{ error }}</h3>
+    {% endif %}
+</body>
+</html>
